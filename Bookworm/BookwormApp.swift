@@ -2,7 +2,7 @@
 //  BookwormApp.swift
 //  Bookworm
 //
-//  Created by Adela Bonoiu on 12/6/22.
+//  Created by Muslim Baig on 12/6/22.
 //
 
 import SwiftUI

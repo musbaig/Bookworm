@@ -2,7 +2,7 @@
 //  DataController.swift
 //  Bookworm
 //
-//  Created by Adela Bonoiu on 12/10/22.
+//  Created by Muslim Baig on 12/10/22.
 //
 
 import CoreData

@@ -2,7 +2,7 @@
 //  RatingView.swift
 //  Bookworm
 //
-//  Created by Adela Bonoiu on 12/12/22.
+//  Created by Muslim Baig on 12/12/22.
 //
 
 import SwiftUI
@@ -19,8 +19,24 @@ struct RatingView: View {
     var onColor = Color.yellow
     var offColor = Color.gray
     
+    func image(for number: Int) -> Image {
+        return number > rating ? offImage ?? onImage : onImage
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if !label.isEmpty {
+                Text(label)
+            }
+            
+            ForEach(1..<maximumRating + 1, id: \.self) { number in
+                image(for: number)
+                    .foregroundColor(number > rating ? offColor : onColor)
+                    .onTapGesture {
+                        rating = number
+                    }
+            }
+        }
     }
 }
 
