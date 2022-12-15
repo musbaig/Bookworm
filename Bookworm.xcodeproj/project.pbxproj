@@ -51,10 +51,6 @@
 			children = (
 				49DE3E89294847F600A31EC8 /* .gitignore */,
 				49D9DFBD2946D4D200A3EAA3 /* Book.xcdatamodeld */,
-				49D9DFC02946D68D00A3EAA3 /* AddBookView.swift */,
-				49E02DDE29484B2D002E8964 /* EmojiRatingView.swift */,
-				49E02DE0294856C1002E8964 /* DetailView.swift */,
-				49D9DFBB294453AD00A3EAA3 /* DataController.swift */,
 				49AD3E8D293F1FBD007E6593 /* Bookworm */,
 				49AD3E8C293F1FBD007E6593 /* Products */,
 			);
@@ -71,7 +67,11 @@
 		49AD3E8D293F1FBD007E6593 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
+				49D9DFC02946D68D00A3EAA3 /* AddBookView.swift */,
+				49E02DDE29484B2D002E8964 /* EmojiRatingView.swift */,
+				49D9DFBB294453AD00A3EAA3 /* DataController.swift */,
 				49AD3E8E293F1FBD007E6593 /* BookwormApp.swift */,
+				49E02DE0294856C1002E8964 /* DetailView.swift */,
 				49AD3E90293F1FBD007E6593 /* ContentView.swift */,
 				49AD3E92293F1FBF007E6593 /* Assets.xcassets */,
 				49AD3E94293F1FBF007E6593 /* Preview Content */,

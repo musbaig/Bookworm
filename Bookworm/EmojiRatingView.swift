@@ -2,7 +2,7 @@
 //  EmojiRatingView.swift
 //  Bookworm
 //
-//  Created by Adela Bonoiu on 12/13/22.
+//  Created by Muslim Baig on 12/13/22.
 //
 
 import SwiftUI
