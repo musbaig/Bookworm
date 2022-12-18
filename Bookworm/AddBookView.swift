@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+extension String {
+    func trimmed() -> String {
+        return self.trimmingCharacters(in: .whitespaces)
+    }
+    
+    func isEmptyString() -> Bool {
+        return self.trimmed() == ""
+    }
+}
+
+let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+
 struct AddBookView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
@@ -14,10 +26,15 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre = genres[0]
     @State private var review = ""
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    var hasMissingBookInfo: Bool {
+        if title.isEmptyString() || author.isEmptyString() || genre.isEmptyString() || review.isEmptyString() {
+            return true
+        }
+        return false
+    }
     
     var body: some View {
         NavigationView {
@@ -51,7 +68,7 @@ struct AddBookView: View {
                         try? moc.save()
                         dismiss()
                     }
-                }
+                }.disabled(hasMissingBookInfo)
             }
             .navigationTitle("Add a book")
         }
